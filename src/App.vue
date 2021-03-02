@@ -22,22 +22,25 @@ export default {
     return {
       products: [
         {
-          title: 'Nike Air Max',
-          color: 'green',
-          bgtext: 'NIKE',
-          src: require('./assets/green-shoe.png')
+          title: 'Bennet',
+          description: 'The unlucky adventure',
+          color: 'orange',
+          bgtext: 'BEN',
+          src: require('./assets/1.png')
         },
         {
-          title: 'Nike flex',
+          title: 'Xiao',
+          description: 'The last wasak',
           color: 'blue',
-          bgtext: 'AIR',
-          src: require('./assets/blue-shoe.png')
+          bgtext: 'XIAO',
+          src: require('./assets/2.png')
         },
         {
-          title: 'Nike Roche Runs',
+          title: 'Jean',
+          description: 'The Head Captain of the Knights of Favoniun',
           color: 'pink',
-          bgtext: 'MAX',
-          src: require('./assets/pink-shoe.png')
+          bgtext: 'JEAN',
+          src: require('./assets/3.png')
         }
       ]
     }
@@ -56,9 +59,10 @@ export default {
 
         let img_x = mouseX - this.coords(product_image).x;
         let img_y = mouseY - this.coords(product_image).y;
-        product_image.style.transform = `translateY(-${img_y/40}px) translateX(-${img_x/40}px) translateZ(100px)`;
+        product_image.style.transform = `translateY(-${img_y/25}px) translateX(-${img_x/25}px)`;
       
         let bgtext = product.querySelector('.bg-text');
+
         let bg_x = mouseX - this.coords(bgtext).x;
         let bg_y = mouseY - this.coords(bgtext).y;
         bgtext.style.transform = `translateX(${bg_x/25}px) translateY(${bg_y/25}px)`;      
@@ -100,7 +104,7 @@ main {
 
 .products {
   display: flex;
-  max-width: 1280px;
+  max-width: 1600px;
   padding: 25px;
   margin: 0 auto;
 }

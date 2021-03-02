@@ -9,7 +9,7 @@
             </div>
             <div class="product-detail">
                 <h2>{{ product.title }}</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa officiis obcaecati placeat cum incidunt minus optio pariatur odio laborum deleniti.</p>
+                <p>{{product.description}}</p>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@ export default {
 <style>
     .product {
         flex: 1 1 33.333%;
-        width: 100%;
+        width: 1260px;
         padding: 25px;      
     }
 
@@ -36,8 +36,8 @@ export default {
         perspective: 1000px;
     }
 
-    .product-inner.green {
-        background-image: linear-gradient(to bottom right, #24D484, #116432);
+    .product-inner.orange {
+        background-image: linear-gradient(to bottom right, orange, red);
     }
 
     .product-inner.blue {
@@ -56,25 +56,25 @@ export default {
         bottom: 0;
         z-index: 0;
         overflow: hidden;
-        perspective: 1000px;
+        /* perspective: 1000px; */
     }
 
     .product-text-wrap h2 {
         color: #313131;
-        font-size: 128px;
+        font-size: 140px;
         font-weight: 900;
         opacity: 0.2;
         transform-origin: center;
     }
 
     .product-image-wrap {
-        position: relative;
         z-index: 1;
-        transform-origin: center;
+        /* transform-origin: center; */
     }
     
     .product-image-wrap .image {
-        width: 100%;
+        width: 40%;
+        position: relative;
         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.25));
     }
 
